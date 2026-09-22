@@ -84,3 +84,168 @@ document.write("<h3>Series:</h3>");
 for (var i = 2; i <= 20; i = i + 2) {
     document.write(i + "k, ");
 }
+
+//STARS PATTERN 
+
+// https://www.geeksforgeeks.org/javascript/nesting-for-loops-in-javascript/
+
+// Star Pattern
+for ( i =1; i<=4 ; i++){
+
+    for( j =1 ; j<=5 ; j++)
+     {
+        document.write("*")
+     }
+     document.write("<br>")
+    }
+    
+    document.write(`<br><br>`)
+    
+    
+    // //Star Pattern in ascending order
+    document.write(`Star pattern in asscending order <br>`)
+    document.write(`<br><br>`)
+    for ( i =5; i>=1 ; i--){
+    
+    for( j =5 ; j>=i ; j--)
+     {
+        document.write("*")
+     }
+     document.write("<br>")
+    }
+    
+    document.write(`<br><br>`)
+    
+    
+    //Dynamic
+    var userRow = +prompt("Enter Number Of Rows..")
+    var userCol = +prompt("Enter Number Of Columns..")
+    var userChar = prompt("Enter your character")
+    for ( i =1 ; i<=userRow ; i++){
+        for( j=1 ; j<=userCol ; j++ ){
+            document.write(userChar)
+        }
+        document.write(  "<br>")
+    }
+    document.write(`<br><br>`)
+    
+    
+    
+    //pyramid pattern 
+    document.write(`<br><br>Pyramid Pattern`)
+    let rows = 5;
+    document.write(`<br><br>`) 
+    for (let i = 1; i <= rows; i++) {
+      let str = "";
+      
+      for (let j = 1; j <= rows - i; j++) {
+        str += " ";
+      }
+      
+      for (let k = 1; k <= (2 * i - 1); k++) 
+       {
+        str += "*";
+      }
+      document.write(str+"<br>");
+    }
+    document.write(`<br><br>`)
+    
+    
+    
+    
+    
+    //right-aligned triangle
+    document.write(`<br><br>right-aligned triangle`)
+    let rows2 = 5;
+    document.write(`<br><br>`)
+    for (let i = 1; i <= rows2; i++) {
+        let rowString2 = "";
+    
+    
+        for (let j = 1; j <= rows2 - i; j++) {
+            rowString2 += " ";
+        }
+    
+        for (let k = 1; k <= i; k++) {
+            rowString2 += "*";
+        }
+    
+        document.write(rowString2+"<br>");
+    }
+    document.write(`<br><br>`)
+    
+    //inverted right aligned-triangle
+    document.write(`<br><br> inverted right-aligned triangle`)
+    let rows1 = 5;
+    document.write(`<br><br>`)
+    for (let i = 0; i < rows1; i++) {
+        let rowString1 = "";
+    
+        for (let j = 0; j < i; j++) {
+            rowString1 += " ";
+        }
+    
+        for (let k = 0; k < rows1 - i; k++) {
+            rowString1 += "*";
+        }
+    document.write(rowString1+"<br>");
+    }
+
+ 
+    document.write("<h2> <br> Stars practice </h2>");
+
+for(i=1; i<=5; i++){
+for(j=1; j<=5-i; j++){
+ document.write("*")
+}
+document.write("<br>")
+}
+
+document.write("<h2> <br> stars practice </h2>");
+let row = 5;
+for (let i = 1; i <= row; i++) {
+  let line = "";
+  // add spaces first, for centering
+  for (let s = 1; s <= row - i; s++) {
+    line += " ";
+  }
+  // then add stars
+  for (let j = 1; j <= 2 * i - 1; j++) {
+    line += "*";
+  }
+  document.write(line);
+}
+
+
+document.write("<h2> <br> practice </h2>");
+var cities = ["karachi", "islamabad", "skardu", "lahore"];
+var userCity = prompt("Enter your city name....");
+var flag = false;
+var transform = userCity.toLowerCase();
+for (var i = 0; i < cities.length; i++) {
+    if (transform === cities[i]) {
+        flag = true;
+        document.write(transform, "found");
+        break;
+    }
+}
+if (flag === false) {
+    document.write(userCity," not found");
+}
+
+document.write("<h2> <br> star practice </h2>");
+
+for (var i = 1; i <= 5; i++) {
+   for (var j = 1; j <= 5 - i; j++) {
+        document.write("&nbsp;");
+    }
+    for (var k = 1; k <= (2 * i - 1); k++) {
+        document.write("*");
+    }
+    document.write("<br>");
+}
+var birthMonth = prompt("Enter your birth month....")
+ 
+if(birthMonth.length>3){
+console.log(birthMonth.slice(0,3));
+}
